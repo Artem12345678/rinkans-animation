@@ -1,0 +1,54 @@
+body {
+	background-color: #000;
+}
+
+.fly-in-text {							/*Размещаем текст по центру*/
+	list-style-type: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.fly-in-text li {						/*Стилизируем буквы*/
+	display:inline-block;
+	color:#fff;
+	margin-right:50px;
+	font-family: Open Sans, Arial;
+	font-weight: 300;
+	font-size: 4em;
+	opacity:1;
+	transition: all 2.5s ease;
+}
+
+.fly-in-text li:last-child {			/*У последней буквы
+										  убираем отступ*/
+	margin-right:0;
+}
+
+.fly-in-text.hidden li {				/*Если есть класс hidden
+										  то скрываем буквы*/
+	opacity:0;
+}
+
+.fly-in-text.hidden li:nth-child(1) {   /*И меняем расположение*/
+	transform: translate(-200px, -200px);
+}
+.fly-in-text.hidden li:nth-child(2) {
+	transform: translate(20px, 100px);
+}
+.fly-in-text.hidden li:nth-child(3) {
+	transform: translate(-150px, -80px);
+}
+.fly-in-text.hidden li:nth-child(4) {
+	transform: translate(10px, -200px);
+}
+.fly-in-text.hidden li:nth-child(5) {
+	transform: translate(-300px, -200px);
+}
+.fly-in-text.hidden li:nth-child(6) {
+	transform: translate(20px, -20px);
+}
+.fly-in-text.hidden li:nth-child(7) {
+	transform: translate(30px, 200px);
+}
